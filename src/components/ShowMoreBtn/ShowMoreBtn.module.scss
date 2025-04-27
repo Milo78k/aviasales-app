@@ -1,0 +1,36 @@
+@import '../../styles/variables';
+
+.show-more-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+  background-color: $primary-color;
+  color: $white-color;
+  padding: 10px 20px;
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  font-size: $light-gray-size;
+  font-weight: $price-font-weight;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #158bec;
+  }
+}
+@media (max-width: 768px) {
+  .show-more-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 528px) {
+  .show-more-btn {
+    width: 320px;
+  }
+}

@@ -1,0 +1,76 @@
+@import '../../styles/variables';
+
+.card {
+  font-family: $font-family;
+  max-width: 502px;
+  width: 100%;
+  padding: 9px;
+  background-color: $white-color;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 528px) {
+    font-size: $small-size-text;
+    flex-shrink: 0;
+    width: 320px;
+  }
+}
+
+.wrapper {
+  padding: 0 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 24px;
+  color: $primary-color;
+  font-weight: 600;
+}
+
+.logo {
+  width: 110px;
+  height: auto;
+  object-fit: contain;
+}
+
+.segment {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+}
+
+.label {
+  font-size: 10px;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: 500;
+  color: $text-color;
+
+  @media (max-width: 528px) {
+    font-size: $small-size-text;
+  }
+}

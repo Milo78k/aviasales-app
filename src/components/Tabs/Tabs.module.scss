@@ -1,0 +1,60 @@
+@import '../../styles/variables';
+
+.tabs {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: $light-gray-size;
+
+  &-btn {
+    background-color: $white-color;
+    border: 1px solid $border-tabs-color;
+    padding: 20px;
+    font-weight: $price-font-weight;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: $text-color;
+    border-radius: 0;
+    width: 168px;
+
+    &.first {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &.last {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &:not(:last-child) {
+      border-right: none;
+    }
+  }
+  @media (max-width: 768px) {
+    justify-content: center;
+    letter-spacing: 0.3px;
+
+    &-btn {
+      font-size: 9px;
+      width: 33.9%;
+      padding: 10px 10px 20px 10px;
+    }
+  }
+
+  @media (max-width: 528px) {
+    justify-content: center;
+    letter-spacing: 0.3px;
+
+    &-btn {
+      font-size: 9px;
+      width: 100px;
+      padding: 10px 10px 20px 10px;
+    }
+  }
+}
+
+.btn-active {
+  background-color: $primary-color;
+  color: $white-color;
+}
