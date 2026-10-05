@@ -70,4 +70,10 @@ export const fetchTickets = createAsyncThunk(
       return rejectWithValue(error.message);
     }
   },
+  {
+    condition: (_, { getState }) => {
+      const { loading, allTicketsLoaded } = getState().tickets;
+      return !loading && !allTicketsLoaded;
+    },
+  },
 );

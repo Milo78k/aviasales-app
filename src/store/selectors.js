@@ -1,7 +1,8 @@
 import { createSelector } from '@reduxjs/toolkit';
 
 const filterByStops = (tickets, selectedStops = []) => {
-  if (!selectedStops.length || selectedStops.includes('all')) return tickets;
+  if (!selectedStops.length) return [];
+  if (selectedStops.includes('all')) return tickets;
 
   return tickets.filter((ticket) =>
     ticket.segments.every((segment) =>
