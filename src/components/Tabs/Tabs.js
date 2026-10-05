@@ -6,7 +6,6 @@ import styles from './Tabs.module.scss';
 const tabs = [
   { value: 'cheapest', label: 'САМЫЙ ДЕШЕВЫЙ' },
   { value: 'fastest', label: 'САМЫЙ БЫСТРЫЙ' },
-  { value: 'optimal', label: 'ОПТИМАЛЬНЫЙ' },
 ];
 
 export default function Tabs() {
